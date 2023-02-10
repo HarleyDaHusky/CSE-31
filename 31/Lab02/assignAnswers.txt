@@ -1,0 +1,11 @@
+Individual Assignment 1:
+
+1. Line 22
+2. Added a "&" to input to make it register the inputed value into the pointer address.
+3. The helper function (read_value()) doesn't calculate the sum properly. 
+4. We make sum a pointer throughout the function, this makes it so the code adds input to the address of sum, and it is then accessed via the "&" when read_value() is run.
+
+Individual Assignment 2:
+1. Yes
+2. No, the second inputs replace every letter of the previous input for how long the len() of the new input is.
+3. The output is not expected, the function is probably working weird due to the allocation of 10 slots, however, we are using more than 10.

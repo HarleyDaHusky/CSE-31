@@ -1,0 +1,23 @@
+delcare: int for count, bool for checkpoint, int for count, and int for the input
+
+Set a while loop that'll run infinitely{
+    check if count is > 3 and <21
+    do count%10 to see base number (if over 10)
+    have if statements to determine "st" "nd" "rd" "th"
+
+    Ask for user input of a value with correct count 
+
+    check if value is 0{
+        if value is 0, set checkpoint to false
+    }
+
+    add user input to total.
+    
+}
+
+declare two variables for odd/even
+declare two new counts for odd/even
+add all inputs and add them to the appropriate totals (odd or even)
+add 1 for each odd/even added
+find average for odd/even
+print none (if no average calculated), print 1 (odd or even if other one is empty), or both

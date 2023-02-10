@@ -1,0 +1,31 @@
+Activity 1:
+
+1.  Jeffrey Peng
+    Emil 
+    Connor 
+
+2.
+https://www.youtube.com/watch?v=ROjZy1WbCIA
+https://www.youtube.com/watch?v=BMGixkvJ-6w
+https://www.youtube.com/watch?v=IVquJh3DXUA
+
+Activity 2:
+1. Ctrl + Alt + T
+1a. You can open an infinite number of terminals.
+1b. You would probably want to open x amount of terminals based off of how many you need because you may need to use each terminal for different activiies and files.
+2. You can use the "ls" (list) command.
+3. cd desktop
+4. mkdir CSE031
+
+Activity 3:
+1.	https://www.log2base2.com/C/basic/how-to-compile-the-c-program.html
+	https://www.geeksforgeeks.org/gcc-command-in-linux-with-examples/
+
+3. gcc (file name)
+4. You will have the output file a.out
+5. This command compiles the program and gives the object file as an output.
+6. This command is an option for debugging
+7. mv main.c cselab.c
+8. Compiles successfully, however creates a file called "a.out"
+9. ./a.out
+

@@ -1,0 +1,19 @@
+Activity 1:
+    1. Jeffrey
+    2a. https://www.youtube.com/watch?v=v_C1cvo1biI
+    2b. https://www.youtube.com/watch?v=3BkEOvI36Ds
+    2c. https://www.youtube.com/watch?v=2GV0K9Y2MKA
+
+Activity 2:
+    1. clang -g punishment.c
+    2. lldb ./a.out
+    3. run
+    4. Essentially placing a point in which the terminal will know to stop there. A way to stop the automated execution at a designated line. To set a breakpoint, 
+    To set a breakpoint in a function, you would do - b (funciton name) - and to break at a specific line, - b (functino name).c:(line) -.
+
+Activity 3:
+    1. 4 variables, 2 pointers
+    2. I think x,y, and arr[0] will be their initialize locations as they don't have an initialized value.
+       x = 13795356
+       y = 1
+       arr[0] = 256
