@@ -1,0 +1,22 @@
+TPS Activity 1
+1. MARS stands for MIPS Assembler and Runtime Simulator
+5a. Open a file and look for the file you're trying to Open
+5b. Press the screwdriver and wrench at the top
+5c. Press the Play/Run all or Run 1 at a time (Debugger)
+5d. No.
+5e. Instead of pressing the Play/Run all, there is an alternative run button that runs line by line
+5f. Press the blue rewind button (reset all) and then you can run again
+
+TPS Activity 2
+1.
+.word Declares a word (4 bytes) in the static data segment that contains the value 
+.data Define the program data (static data segment)
+.text Define the program instructions (text segment).
+
+2. Line 10 is the main function
+3. j jumps the terminal back to a specified portion of the code
+4. After assembling, change the tab of the text editing portion from edit to Execute, then select a under 'Text Segment' breakpoint.
+5. Press the Run Line by Line or Run all
+6. There's a tab on the side that shows the register of all values. The values of the registers can be editted under the Data Segment tab available in the Execute tab
+7. 0x0000000a
+8. Execute the system call specified by value in $v0, put it at the end of a operation to see if desired output could be achieved and end the processor.
