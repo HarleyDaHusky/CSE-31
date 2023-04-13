@@ -1,0 +1,16 @@
+Activity 1:
+1. 0x00400000
+2. Basic shows the instructions but source shows what's being modified
+3. 32 bytes
+4. 8
+5. Nothing?
+6. main: add $t0, $0, $zero
+7. $a0 = 0x10010004
+8. str1: .asciiz "I love CSE31!"
+10. 0x10010000 - no it does not match waht we have learned since the letters are all scrambled
+11. We load the location where str1 is stored and print out the location
+12. After this instruction, $t3 will have the address of n stored within it.
+
+Activity 2:
+1. In mips, the order of how you place address carrying values matters. Thus, it is unneeded for MIPS 
+to have operators for opposite of > and >= 

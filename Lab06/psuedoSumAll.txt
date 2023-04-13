@@ -1,0 +1,49 @@
+.data
+Globals (sumEven, sumOdd, three strings (2 output and one input request))
+    .text
+    load service 4 to print string
+    load the desired print statement
+
+    load service 5 to get user input
+    move the value to a useable register/location
+    
+    take remainder of saved value divided by 2 and store in another location
+    compare the remainder to 0 or 1 to determine even/odd
+    check first with 0 -> jump to even function
+    check after with 1 -> jump to odd function
+
+repeating function: check if the first register is the same as 0, jump to print if so
+    (0 is the kill/end function)
+    load service 4 to print string
+    load the desired print statement
+
+    load service 5 to get user input
+    move the value to a useable register/location
+
+    take remainder of saved value divided by 2 and store in another location
+    compare the remainder to 0 or 1 to determine even/odd
+    check first with 0 -> jump to even function
+    check after with 1 -> jump to odd function
+
+    jump back to the repeating function
+
+even function: location+=location+value
+    jump back to the loop that's repeating
+
+odd function: location+=location+value
+    jump back to the loop that's repeating
+
+print function:
+    load service 4 to print string
+    load the desired print statement
+
+    load service 1 to print integer
+    load the desired print value
+
+    load service 4 to print string
+    load the desired pritn statement
+
+    load service 1 to print integer
+    load the desired print value
+
+    load service 10 to exit MIPS
