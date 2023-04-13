@@ -1,0 +1,35 @@
+Main checker function - named nearby()
+ideally recursive
+
+Parameters:
+-original array of word
+int i,j (location of array)
+index of the letter of the word we're at (so we can backtrack in case a certain path fails)
+the word we're searching for (for edge case)
+the 2d array for the saved locations of the letters
+
+Body:
+Start with edge case, if the word's length == index count, assume true
+
+Start incrementation of search, start with i-1 and j-1 to i+1 and j+1 (this 
+    creates the 3x3 matrix around the current letter we're at)
+
+Make sure K and L are within bounds (not negative, not greater than size, and k+l
+    isn't the position of i+j which is the letter we're searching around)
+    Continue to make sure that this letter is skipped
+
+if(arr+k+l) is *word+index (or the letter), index++; and recursively call the 
+    function, this allows the code to test to see if the rest of the word fits in
+    this path, otherwise next (and so on for every letter within).
+
+Then record the letter if nearby (or the main search) returns true.
+
+Recording works by setting k+l of the new 2d array to the value of the index
+    if the value at the given index is currently 0, otherwise, the code measures
+    the current values stored by 10, and addes index (this allows the code to
+    store the older value up 1 digit (1,10,100 etc))
+
+Finally, return true to found
+
+If nearby fails, index is backed out until backed out all the way, which then,
+funciton returns false.
