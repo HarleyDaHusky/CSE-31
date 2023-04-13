@@ -1,0 +1,26 @@
+TPS 1
+1. I expect the program to print the ASCII value of 65+i or 0x41 in Hex.
+2. The ASCII or 0x41 in Hex of 65+i.
+3. It does not print out what I expect.
+4. This one prints out 2 rather than a weird number. I am surprised by this as I would have expected another weird number such as the one outputted at index 0.
+5a. Technically 1.
+5b. No.
+5c. They are indeed different.
+6. They are different by 4 bytes except for the 2nd and 3rd index which changes from 8 to c. This is because the size of an int is 4 bytes.
+7. 1145258561 = 0x7ff7b07b44f0
+   2 = 0x7ff7b07b44f4
+   2 = 0x7ff7b07b44f8
+   2 = 0x7ff7b07b44fc
+8. The values increase by 8 per increment of "index". This is because the compiler takes a 4 byte int and makes it a pointer making it 8 bytes(?).
+9. 65 = 0x7ff7bf6f34e0
+   66 = 0x7ff7bf6f34e8
+   67 = 0x7ff7bf6f34f0
+   68 = 0x7ff7bf6f34f8
+10. I notice that the index of the array changes only through the address. But this is also because the code doesn't manipulate four_ints but rather four_c more.
+
+TPS 2
+1. Allocates the space for a 2d arry of **arr (n * n).
+2. printf("%p", *arr+i)
+3. (In code)
+4. We need to pass the size because otherwise, we can print out of bounds for both i and j, causing segmentation fault.
+5-7 (in code).
