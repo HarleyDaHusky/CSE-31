@@ -1,0 +1,19 @@
+Names: Jeffrey Peng
+
+Activity 1:
+1. static, stack and head. static can store variables that are defined and accessed anywhere. Stack variables are only able to be used within the loop/function depending on where the variable is declared. Heap stores global variables.
+2a. 3 variables
+2b. 2 pointers, both are int with one of them being 2d and the other being 3d (pointers).
+2c. Since these are declared in main, they are local variables for main, and thus they are declared in Stack.
+2d. The pointer on line 12 should point to a variable in Stack because it is a local variable.
+3. num,ptr, and handle are stored in the stack. This is because they are local to the main function and cannot be accessed in another function.
+4. num, ptr, handle -> [stack]. [static]. [heap]
+
+Activity 2:
+1. The code changes the value of iValue to 5, and the value of fValue to 3.14 through the head function of a Node which basically just iterates the Node "array" to the next value.
+3. Structures are stored in memory through iteration of Nodes (similar to arrays). the pointer head, is the start of the Node.
+
+Individual Assignment 1:
+1a. To know how many values we need to iterate through to also not step out of bounds. 
+1b. Yes,
+1c. It is easier to create a new array and store values into the array then change the value in a index of a array.
