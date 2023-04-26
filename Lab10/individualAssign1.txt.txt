@@ -1,3 +1,5 @@
+CPU: AMD Ryzen 5 3600 Processor
+
 1. My CPU has L1 Data, L1 Inst, Level 2 and Level 3
 2.
 L1 Data - 6x32  K Bytes
