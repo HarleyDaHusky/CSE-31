@@ -1,0 +1,27 @@
+1. My CPU has L1 Data, L1 Inst, Level 2 and Level 3
+2.
+L1 Data - 6x32  K Bytes
+L1 Inst - 6x32  K Bytes
+L2 	- 6x512 K Bytes
+L3	- 2x16  M Bytes
+
+3.
+L1 - 32 KBytes
+L2 - 512 KBytes
+L3 - 32 MBytes
+
+4. MY CPU has set-associative caches
+L1 - 8 way set-associative
+L2 - 8 way set-associative
+L3 - 16 way set-associative
+
+5.
+Cache size: 32 KB
+Block Size: 64 Bytes
+Assoctivity: 8 way-set associative
+
+Total number of bits = 32KB = 32768 bytes = = 2^15 bytes
+Number of blocks = 32768 bytes/64 bytes/block = 512 blocks
+Number of index bits = log2(512 blocks/8 way) = log2(64) = 6 bits
+Number of offset bits = log2(64 bytes per block) = 6 bits
+Number of tag bits = 15-6-6=3 bits

@@ -1,0 +1,48 @@
+Activity 1:
+1. A cache stores data in a local folder on the device which can increase application or website performance and efficiency by speeding up load times the next time a user opens or visits an applicatino or site.
+
+4. if the block size is 16B, we will need 4 bits to represent all the possible byte offsets (0-15) within a block. The number of bits in the offset as a fucntion of block size is gievn by log2(block size) in this case, log2(16) = , which means that twe need 4 bits to represent the byte offset within a block of size 16B. It is not practical to have a cahce block size of 1 bytes because the overhead of managing a cache with such small blocks would be too high. The cahce would requier more entries to store the same amount of data, which would result in moer overhead and less effective use of the cache. Additionally, the befits of caching would be limited since each cache hit would only result in a small amount of data being retrieved. Therefore, cache block sizes are typically much larger than 1 byte, and in practice, block sizes of 16B or more are commonly used.
+
+5. Since there are 64 blocks in the cache, we need 6 bits to represent all possible block numbers (0-63). This means that the next 6 bits of a memory address after the offset bits are used to represent the index or block number in the cache. The number of bits in the index as a functino of the number of blocks is given by log2(number of blocks). in this case, log2(64) = 6, which means that we need 6 bits to represnt the index or block number in a cache with 64 blocks. Generally, the number of index bits required depends on the number of blocks in the cache. The more blocks there are in the cache, the more bits are needed to represent the index. Specifically, if the cache has 2^n blocks, then we need n bits to represent the index.
+
+6. Yes, once you nkow the number of blocks and the block size of a cache, you can calculate the total size of the cache by multiplying the number of blocks by the block size. This is becasue the cache size is equalt to the total amount of data that the cache can hold. For example, if a cache has 64 blocks and each block is 16 bytes, then the total size of the cache would be 64 blocks * 16 bytes/block = 1024 bytes (only an example).
+
+7. The leftover bits from the address after extracting the index and offset bits are used to represent the tag bits. Tag bits uniquely identify each cache block and are used to determine wheter the requested data is present in th cache or not. The tag bits are important ebcause they help to determine whether a cache hit or miss has occured. When the processer requests data from memory, the cache controller first checks the tag bits of each cache block to see if the requested data is present in the cache. If the tag bits of a cache block match the tag bits of the requested memoryu addres, then a cache hit has occursed, and the requested data can be retrieved from the cache. Otherwise, if there is no match, then a cache miss has occursed and the data must be retrieved from main memory. The number of tag bits required depends on the size of the main emmory and the size of the cache. Specifically, the number of tag bits required is equal to the number of bits in the memory addresss minus the number of bits used for the index and offset. Therefore, the moer bits used for the index and offset, the fewer bits are available for the tag. This means that caches with larger block sizes or more blocks may require moer index and offset bits, which in turn reduces the number of tag bits available. Therefore, it is important to carfeully choose the block size and number of blocks in a cache to balance the trade-off between the size of the cache and the number of tag bits required. 
+
+8a. The size of the main memory is 2^n or 2^20, therefore 1048576 bytes.
+8b. The block size is 8 bytes, so the offset is 2^n = 8, n =3 thus 3 bits.
+8c. Cache size is 128 bytes, and the block size is 7 bytes, so the number of blocks in the cache would be 128/8 = 16
+8d. Since there are 16 blocks in the cache, we need 4 index bits to represent all possible block numbers (0-15)
+8e. The unmber of tag bits can be calculated by subtracting the number of offset and index bits from the total number of bits in the address. Therefore, the nunmber of tag bits would be 20-4-3 = 13
+8g. The nubmer of bits per row of the cache would eb the sum of bits for the tag, valid bit, dirty bit, and data block, therefore, the number of bits per row would be 13+1+1+8*8= 78
+
+Activity 2:
+1. The main disadvantage of a direct-mapped cache is that it can lead to a high number of conflicts or collisions, where multiple memory blocks map to the same cache block. This occurs because the index bits only provide a limited nubmer of possible cache blocks to map to, and any memory block that maps to the same cache block as another memory block will cause a cache conflict. When a cache block is filled with a memory block, it is said to be "occupied". If a memory block that maps to the same cache block as an occupied cache block is accessed, it resutls in a cache miss known as "conflict miss". The cache block must be replaced with the new memory block, and if the original block was modified, it must be written back to the main memoryu before the new blcok can be loaded. This process, called "cache evictino", results in additinoal time and energy costs, and can reduce cache performance.
+
+3.There are 1024/4 = 256 sets in the cache. To determine the number of index bits required, we can use log2(number of sets) = log2(256) = 8. Number of index bits in the index field can be found by log2(number of sets) = log2(number of blocks/associativity).
+
+4a. Main memory size is 2^20 = 1048576
+4b. The block size is 8bytes or 2^3 bytes so the number of offset bits required is log2(2^3)=3 bits.
+4c. The cache size is 128 bytse which is 2^7 bytes. The number of blocks ni the cache can be calculated as 2^7/2=64 blocks 
+4d. The number of set sin the cache can be calculated as 64/2 = 32 sets
+4e. The number of index bits required can be calculated as log2(32) = 5 bits
+4f. The number of tag bits required can be calculated as 20-5-3=12 bits
+4g.
++----------------+-------------+--------------+----------------------+
+| Set 0          |             |              |                      |
++----------------+-------------+--------------+----------------------+
+| Tag 0, Line 0  | Valid Bit   | Dirty Bit    | Data Block 0         |
++----------------+-------------+--------------+----------------------+
+| Tag 0, Line 1  | Valid Bit   | Dirty Bit    | Data Block 1         |
++----------------+-------------+--------------+----------------------+
+
+          ...
+
++----------------+-------------+--------------+----------------------+
+| Set 31         |             |              |                      |
++----------------+-------------+--------------+----------------------+
+| Tag 31, Line 0 | Valid Bit   | Dirty Bit    | Data Block 14        |
++----------------+-------------+--------------+----------------------+
+| Tag 31, Line 1 | Valid Bit   | Dirty Bit    | Data Block 15        |
++----------------+-------------+--------------+----------------------+
+4h. The number of bits per row of the cache would be 12 (tag) + 1 (valid bit) + 1 (dirty bit) + 8(data block) = 22 bits.
